@@ -8,8 +8,8 @@
 import OSLog
 
 extension Logger {
-    private static var subsystem: String = Bundle.main.bundleIdentifier!
+  private static var subsystem: String = Bundle.main.bundleIdentifier!
 
-    static let visual = Logger(subsystem: subsystem, category: "visual")
-    static let logical = Logger(subsystem: subsystem, category: "logical")
+  static let visual = Logger(subsystem: subsystem, category: "visual")
+  static let logical = Logger(subsystem: subsystem, category: "logical")
 }

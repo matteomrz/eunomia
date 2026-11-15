@@ -8,5 +8,5 @@
 import Foundation
 
 enum DataError: Error {
-    case notFound(Any.Type, UUID)
+  case notFound(Any.Type, UUID)
 }

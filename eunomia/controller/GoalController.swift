@@ -10,14 +10,14 @@ import SwiftData
 
 @MainActor @Observable
 final class GoalController {
-    var context: ModelContext
+  var context: ModelContext
 
-    init(context: ModelContext) {
-        self.context = context
-    }
+  init(context: ModelContext) {
+    self.context = context
+  }
 
-    func addGoal(goal: Goal) throws {
-        context.insert(goal)
-        try context.save()
-    }
+  func addGoal(goal: Goal) throws {
+    context.insert(goal)
+    try context.save()
+  }
 }

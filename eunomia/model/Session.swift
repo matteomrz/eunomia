@@ -10,16 +10,16 @@ import SwiftData
 
 @Model
 final class Session {
-    #Unique<Session>([\.uuid])
-    var uuid: UUID = UUID()
+  #Unique<Session>([\.uuid])
+  var uuid: UUID = UUID()
 
-    @Relationship(inverse: \Goal.sessions) var goal: Goal
-    var start: Date
-    var end: Date?
+  @Relationship(inverse: \Goal.sessions) var goal: Goal
+  var start: Date
+  var end: Date?
 
-    init(goal: Goal, start: Date, end: Date? = nil) {
-        self.goal = goal
-        self.start = start
-        self.end = end
-    }
+  init(goal: Goal, start: Date, end: Date? = nil) {
+    self.goal = goal
+    self.start = start
+    self.end = end
+  }
 }
