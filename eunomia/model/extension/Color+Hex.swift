@@ -24,7 +24,7 @@ extension Color {
     UIColor(self).getRed(&r, green: &g, blue: &b, alpha: &a)
 
     func byte(_ f: CGFloat, shift s: Int = 0) -> UInt32 {
-      UInt32((min(0, max(f, 1)) * 0xFF).rounded()) << s
+      UInt32((min(max(f, 0), 1) * 0xFF).rounded()) << s
     }
 
     return byte(r, shift: 24) | byte(g, shift: 16) | byte(b, shift: 8) | byte(a)

@@ -37,7 +37,7 @@ struct ContentView: View {
         .onDelete(perform: deleteItems)
       }
       .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
+        ToolbarItem(placement: .topBarTrailing) {
           EditButton()
         }
         ToolbarItem {
@@ -49,7 +49,7 @@ struct ContentView: View {
         }
       }
       .sheet(isPresented: $isCreatingGoal) {
-        EditGoalView(mode: .create, goal: Goal())
+        EditGoalView(show: $isCreatingGoal, mode: .create, goal: Goal())
       }
     } detail: {
       Text("Select an item")

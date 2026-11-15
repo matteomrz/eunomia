@@ -23,7 +23,6 @@ struct DurationPicker: View {
       get: { seconds % 3600 / 60 },
       set: { seconds = seconds - seconds % 3600 + $0 * 60 }
     )
-
   }
 
   var body: some View {
